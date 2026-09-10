@@ -19,8 +19,8 @@ that will be called out at https://txbitmining.com/wartsolver before it ships.
 Separate from the TXBit pool's 1% fee.
 
 Community hashrate board: this miner posts the rig to
-https://warthog.txbitmining.com so real pairings can be listed. Same machine
-updates one row. Wallet and pool password are not sent.
+https://warthog.txbitmining.com so real pairings can be listed.
+Wallet and pool password are not sent.
 Sent: CPU model/threads/clock/voltage; GPU model/core+mem clocks and offsets/
 power limit; janus, GPU SHA, CPU Verus MH/s; wall/GPU/CPU watts when readable;
 miner version, OS, sample window, optional tweak notes.

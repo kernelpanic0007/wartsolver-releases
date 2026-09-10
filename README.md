@@ -14,7 +14,7 @@ A developer fee **may be added in a future version**. If that happens, it will b
 
 ## Community hashrate board
 
-Running wartsolver posts this rig to the public [Warthog hashrate board](https://warthog.txbitmining.com) so real GPU + CPU pairings can be listed. The same machine updates one row (a hardware fingerprint of board + GPU IDs, not the IDs themselves). Wallet address and pool password are **not** sent.
+Running wartsolver posts this rig to the public [Warthog hashrate board](https://warthog.txbitmining.com) so real GPU + CPU pairings can be listed. Wallet address and pool password are **not** sent.
 
 What is sent:
 
