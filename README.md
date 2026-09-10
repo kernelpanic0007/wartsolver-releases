@@ -21,7 +21,7 @@ What is sent:
 - CPU model, thread count, clock (MHz), voltage
 - GPU model, core clock and offset, memory clock and offset, GPU power limit
 - Janus MH/s, GPU SHA MH/s, CPU Verus MH/s
-- Wall power, GPU watts, CPU watts (when sensors can read them)
+- GPU watts and CPU watts (when sensors can read them)
 - Miner name/version, OS, sample window, optional tweak notes
 
 ## Download
