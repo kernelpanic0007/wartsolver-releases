@@ -4,6 +4,14 @@ Public-facing release bundles for **wartsolver** (Warthog / janushash miner).
 
 > Source lives in a separate private repo; the release bundles here are the supported public builds.
 
+Website, HiveOS flight sheet, and pool connect: **https://txbitmining.com/wartsolver**
+
+## Developer fee
+
+There is **no developer fee** in current builds.
+
+A developer fee **may be added in a future version**. If that happens, it will be called out here, in the GitHub release notes, and on https://txbitmining.com/wartsolver **before** it ships. That is separate from the TXBit pool’s 1% fee.
+
 ## Download
 
 Grab the latest bundle from the [**Releases**](../../releases) page, unpack, and run — no installer.

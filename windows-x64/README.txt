@@ -14,6 +14,10 @@ profile.
 Keep wartsolver.exe and wartsolver-gui.exe together. wart_sensors.exe is
 optional and stands alone.
 
+Developer fee: none in this build. A fee may be added in a future version;
+that will be called out at https://txbitmining.com/wartsolver before it ships.
+Separate from the TXBit pool's 1% fee.
+
 
 REQUIREMENTS
 ------------
