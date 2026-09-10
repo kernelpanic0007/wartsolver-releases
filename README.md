@@ -61,7 +61,7 @@ Like the Windows build, this build validates a licence with txbitmining.com and 
 
 ## HiveOS
 
-Use the dedicated HiveOS package `wartsolver-0.1.274.tar.gz` (NOT the `-linux-x64` one) — it bundles the same public Linux binary plus the `h-config.sh` / `h-run.sh` / `h-stats.sh` wrappers HiveOS needs, so hashrate, per-GPU temps/fans, and accepted/rejected shares all show up on the HiveOS dashboard.
+Use the dedicated HiveOS package `wartsolver_custom-0.1.274.tar.gz` (NOT the plain `-linux-x64` one, which stays a clean generic-Linux bundle) — it bundles the same public Linux binary plus the `h-config.sh` / `h-run.sh` / `h-stats.sh` wrappers HiveOS needs, so hashrate, per-GPU temps/fans, and accepted/rejected shares all show up on the HiveOS dashboard.
 
 **Requires a HiveOS image based on Ubuntu 22.04 or newer** (glibc ≥ 2.35). No ROCm install is needed on AMD — the runtime is embedded in the binary.
 
@@ -71,25 +71,25 @@ Use the dedicated HiveOS package `wartsolver-0.1.274.tar.gz` (NOT the `-linux-x6
 
 | field | value |
 |---|---|
-| Miner name | `wartsolver` (auto-filled from the URL) |
-| Installation URL | `https://github.com/kernelpanic0007/wartsolver-releases/releases/download/v0.1.274/wartsolver-0.1.274.tar.gz` |
+| Miner name | `wartsolver_custom` (auto-filled from the URL) |
+| Installation URL | `https://github.com/kernelpanic0007/wartsolver-releases/releases/download/v0.1.274/wartsolver_custom-0.1.274.tar.gz` |
 | Hash algorithm | leave as `----` |
 | Wallet and worker template | `%WAL%` — the HiveOS worker name is appended automatically as `WALLET.<worker>`; use `%WAL%.%WORKER_NAME%` to set it explicitly |
 | Pool URL | `stratum+tcp://HOST:PORT` |
 | Extra config arguments | optional wartsolver flags, passed verbatim — e.g. `-t 16 --nvidia 0` (see the flag reference below) |
 
-2. Apply the flight sheet. HiveOS downloads the package, installs it under `/hive/miners/custom/wartsolver/`, and starts mining.
+2. Apply the flight sheet. HiveOS downloads the package, installs it under `/hive/miners/custom/wartsolver_custom/`, and starts mining.
 
 ### Install from the rig shell (alternative)
 
 ```bash
-custom-get https://github.com/kernelpanic0007/wartsolver-releases/releases/download/v0.1.274/wartsolver-0.1.274.tar.gz
+custom-get https://github.com/kernelpanic0007/wartsolver-releases/releases/download/v0.1.274/wartsolver_custom-0.1.274.tar.gz
 miner start
 ```
 
 Notes:
 - The wrapper starts the miner with `--status-api 1 --status-port 9500`; the HiveOS agent reads `http://127.0.0.1:9500/status` for the dashboard stats (port 9500 was chosen to not collide with bzminer's 4014).
-- `miner log` shows the live miner output; the log file is `/var/log/miner/wartsolver/wartsolver.log`.
+- `miner log` shows the live miner output; the log file is `/var/log/miner/wartsolver_custom/wartsolver.log`.
 
 ## Flags
 
