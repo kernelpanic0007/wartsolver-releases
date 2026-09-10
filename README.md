@@ -12,6 +12,10 @@ There is **no developer fee** in current builds.
 
 A developer fee **may be added in a future version**. If that happens, it will be called out here, in the GitHub release notes, and on https://txbitmining.com/wartsolver **before** it ships. That is separate from the TXBit pool’s 1% fee.
 
+## Community hashrate board
+
+Running wartsolver sends this rig’s **GPU and CPU configuration** (hardware, clocks, and the janus / power that combo produces) to the public [Warthog hashrate board](https://warthog.txbitmining.com). That list of real pairings is how the community grows. The same machine updates one row; it does not post a new rig every restart. Wallet address and pool password are not part of that report.
+
 ## Download
 
 Grab the latest bundle from the [**Releases**](../../releases) page, unpack, and run — no installer.

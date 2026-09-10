@@ -8,6 +8,11 @@ Developer fee: none in this build. A fee may be added in a future version;
 that will be called out at https://txbitmining.com/wartsolver before it ships.
 Separate from the TXBit pool's 1% fee.
 
+Community hashrate board: this miner sends GPU/CPU config (hardware, clocks,
+janus/power) to https://warthog.txbitmining.com so real pairings can be listed
+for everyone else. Same machine updates one row. Wallet and pool password are
+not sent.
+
 ONE FILE. Run it directly:
   ./wartsolver -p stratum+tcp://POOL:PORT -w YOUR_WALLET -r WORKER_NAME
   ./wartsolver --list-gpus    # what this machine's GPUs look like to the solver
