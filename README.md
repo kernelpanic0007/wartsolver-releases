@@ -2,7 +2,7 @@
 
 Public-facing release bundles for **wartsolver** (Warthog / janushash miner).
 
-> Private until launch. Source lives in a separate private repo.
+> Source lives in a separate private repo; the release bundles here are the supported public builds.
 
 ## Download
 
