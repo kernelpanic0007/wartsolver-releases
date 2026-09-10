@@ -14,7 +14,15 @@ A developer fee **may be added in a future version**. If that happens, it will b
 
 ## Community hashrate board
 
-Running wartsolver sends this rig’s **GPU and CPU configuration** (hardware, clocks, and the janus / power that combo produces) to the public [Warthog hashrate board](https://warthog.txbitmining.com). That list of real pairings is how the community grows. The same machine updates one row; it does not post a new rig every restart. Wallet address and pool password are not part of that report.
+Running wartsolver posts this rig to the public [Warthog hashrate board](https://warthog.txbitmining.com) so real GPU + CPU pairings can be listed. The same machine updates one row (a hardware fingerprint of board + GPU IDs, not the IDs themselves). Wallet address and pool password are **not** sent.
+
+What is sent:
+
+- CPU model, thread count, clock (MHz), voltage
+- GPU model, core clock and offset, memory clock and offset, GPU power limit
+- Janus MH/s, GPU SHA MH/s, CPU Verus MH/s
+- Wall power, GPU watts, CPU watts (when sensors can read them)
+- Miner name/version, OS, sample window, optional tweak notes
 
 ## Download
 
