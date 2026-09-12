@@ -1,6 +1,6 @@
-wartsolver 0.1.274 — public bundle
+wartsolver 0.1.277 — public bundle
 ================================
-Requirements: Linux x86-64 (Ubuntu 24.04+ / glibc 2.38+), a working GPU driver.
+Requirements: Linux x86-64 (Ubuntu 22.04+ / glibc 2.35+), a working GPU driver.
   AMD:    the amdgpu driver. No ROCm install needed — the runtime is inside the binary.
   NVIDIA: the NVIDIA driver. (This bundle: CUDA embedded = yes (prebuilt plugin embedded))
 
