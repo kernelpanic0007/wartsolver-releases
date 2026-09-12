@@ -1,4 +1,4 @@
-wartsolver 0.1.274 - Windows x64
+wartsolver 0.1.277 - Windows x64
 ================================
 
 Unzip and run. There is no installer and nothing is written outside your user
@@ -60,6 +60,29 @@ QUICK START
 Or run wartsolver-gui.exe, fill in pool and wallet, press Start. The GUI asks
 for Administrator because the overclock controls require it. Settings are
 remembered in %APPDATA%\wartsolver\gui.ini.
+
+
+WINDOWS 11 - IF IT WON'T LAUNCH (Smart App Control / SmartScreen)
+----------------------------------------------------------------
+
+The exe is not code-signed yet, so Windows 11's app protection may block it.
+
+  SmartScreen ("Windows protected your PC", with a button):
+    Click "More info", then "Run anyway". Or right-click the exe ->
+    Properties -> tick "Unblock" (bottom of the General tab) -> Apply, then run.
+
+  Smart App Control ("blocked an app that may be unsafe", NO run button):
+    This one hard-blocks with no bypass. You must turn it off:
+      Settings -> Privacy & security -> Windows Security ->
+      App & browser control -> Smart App Control -> Off.
+    NOTE: turning Smart App Control off is ONE-WAY - it cannot be turned back on
+    without resetting/reinstalling Windows. That is Microsoft's design.
+
+  Defender still flags wart_sensors.exe (the CPU-temp driver) separately - that is
+  expected and does not affect mining; see the sensor note below. The miner
+  itself (wartsolver.exe / wartsolver-gui.exe) contains no such driver.
+
+Code-signing is planned, which will clear SmartScreen/Smart App Control for good.
 
 
 CHECK YOUR GPU WAS DETECTED

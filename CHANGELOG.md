@@ -3,7 +3,7 @@
 Notable changes to the public **wartsolver** release bundles, newest first.
 Each version's downloads are on the [Releases](../../releases) page.
 
-## 0.1.274 — 2026-09-11
+## 0.1.277 — 2026-09-11 · Windows x64
 
 ### Fixed
 - **Integrated GPUs are no longer mined by default.** On a Ryzen APU the HIP
