@@ -133,6 +133,7 @@ Same flags on Linux and Windows (the NVIDIA overclocking group needs root/Admini
 | `--list-gpus` | Print every GPU found, with its backend, and exit |
 | `--amd 0\|1` | Use AMD GPUs (default 1) |
 | `--nvidia 0\|1` | Use NVIDIA GPUs (default 1). Both default on, so out of the box the solver uses whatever is in the box; composes with `--gpus`. |
+| `WART_ALLOW_IGPU=1` (env) | Since 0.1.277 integrated/APU GPUs (e.g. a laptop's Radeon 610M/680M/780M) are skipped by default — they mine at a trickle while stealing CPU threads and the APU's shared power budget from the real card. Set this to force an iGPU back in. |
 
 ### Performance / tuning
 
