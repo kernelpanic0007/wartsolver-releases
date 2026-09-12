@@ -54,12 +54,12 @@ This build validates a licence with txbitmining.com and will not mine without it
 | `wartsolver` | the miner. **One file, both GPU backends embedded** — AMD (HIP, ROCm runtime bundled inside: no ROCm install needed) and NVIDIA (CUDA, prebuilt fat plugin) — plus builtin OpenCL fallback and static libstdc++. |
 | `README.txt` | user guide |
 
-**Version:** 0.1.277 · **Requires:** Linux x86-64, Ubuntu 22.04+ (glibc 2.35+), and a working GPU driver — AMD: the `amdgpu` kernel driver (no ROCm needed); NVIDIA: the NVIDIA driver.
+**Version:** 0.1.278 · **Requires:** Linux x86-64, Ubuntu 22.04+ (glibc 2.35+), and a working GPU driver — AMD: the `amdgpu` kernel driver (no ROCm needed); NVIDIA: the NVIDIA driver.
 
 Quick start:
 ```bash
-tar xf wartsolver-0.1.277-linux-x64.tar.gz
-cd wartsolver-0.1.277-linux-x64
+tar xf wartsolver-0.1.278-linux-x64.tar.gz
+cd wartsolver-0.1.278-linux-x64
 ./wartsolver -p stratum+tcp://HOST:PORT -w YOUR_WALLET -r RIGNAME
 ```
 
@@ -72,7 +72,7 @@ Useful first commands:
 
 Verify your download:
 ```bash
-sha256sum -c wartsolver-0.1.277-linux-x64.tar.gz.sha256
+sha256sum -c wartsolver-0.1.278-linux-x64.tar.gz.sha256
 ```
 
 The event log line `[gpu] ... backend loaded: ...` names exactly which backend won; the TUI tags each device `[hip]`/`[cuda]`/`[ocl]`. On hosts with ≤16 hardware threads the solver defaults to a blocking GPU wait (`WART_GPU_BLOCKING_SYNC=0/1` overrides).
@@ -81,7 +81,7 @@ Like the Windows build, this build validates a licence with txbitmining.com and 
 
 ## HiveOS
 
-Use the dedicated HiveOS package `wartsolver_custom-0.1.277.tar.gz` (NOT the plain `-linux-x64` one, which stays a clean generic-Linux bundle) — it bundles the same public Linux binary plus the `h-config.sh` / `h-run.sh` / `h-stats.sh` wrappers HiveOS needs, so hashrate, per-GPU temps/fans, and accepted/rejected shares all show up on the HiveOS dashboard.
+Use the dedicated HiveOS package `wartsolver_custom-0.1.278.tar.gz` (NOT the plain `-linux-x64` one, which stays a clean generic-Linux bundle) — it bundles the same public Linux binary plus the `h-config.sh` / `h-run.sh` / `h-stats.sh` wrappers HiveOS needs, so hashrate, per-GPU temps/fans, and accepted/rejected shares all show up on the HiveOS dashboard.
 
 **Requires a HiveOS image based on Ubuntu 22.04 or newer** (glibc ≥ 2.35). No ROCm install is needed on AMD — the runtime is embedded in the binary.
 
@@ -92,7 +92,7 @@ Use the dedicated HiveOS package `wartsolver_custom-0.1.277.tar.gz` (NOT the pla
 | field | value |
 |---|---|
 | Miner name | `wartsolver_custom` (auto-filled from the URL) |
-| Installation URL | `https://github.com/kernelpanic0007/wartsolver-releases/releases/download/v0.1.277/wartsolver_custom-0.1.277.tar.gz` |
+| Installation URL | `https://github.com/kernelpanic0007/wartsolver-releases/releases/download/v0.1.278/wartsolver_custom-0.1.278.tar.gz` |
 | Hash algorithm | leave as `----` |
 | Wallet and worker template | `%WAL%` — the HiveOS worker name is appended automatically as `WALLET.<worker>`; use `%WAL%.%WORKER_NAME%` to set it explicitly |
 | Pool URL | `stratum+tcp://HOST:PORT` |
@@ -103,7 +103,7 @@ Use the dedicated HiveOS package `wartsolver_custom-0.1.277.tar.gz` (NOT the pla
 ### Install from the rig shell (alternative)
 
 ```bash
-custom-get https://github.com/kernelpanic0007/wartsolver-releases/releases/download/v0.1.277/wartsolver_custom-0.1.277.tar.gz
+custom-get https://github.com/kernelpanic0007/wartsolver-releases/releases/download/v0.1.278/wartsolver_custom-0.1.278.tar.gz
 miner start
 ```
 

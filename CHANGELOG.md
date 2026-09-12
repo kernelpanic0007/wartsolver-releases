@@ -3,7 +3,7 @@
 Notable changes to the public **wartsolver** release bundles, newest first.
 Each version's downloads are on the [Releases](../../releases) page.
 
-## 0.1.278 — 2026-09-11 · Windows x64
+## 0.1.278 — 2026-09-11 · Windows x64 + Linux x64
 
 Maintenance release. No changes to mining behavior, flags, or performance.
 
@@ -13,6 +13,8 @@ Maintenance release. No changes to mining behavior, flags, or performance.
 
 ### Notes
 - Same GPU backends, overclock controls, and flags as 0.1.277.
+- Linux x64 + HiveOS bundles ship under this tag too; their mining code is
+  byte-identical to 0.1.277 (this version's fixes are Windows-side).
 - Smart App Control / SmartScreen may still block the unsigned Windows exe; see
   the bundled `README.txt`. Code-signing is planned.
 
