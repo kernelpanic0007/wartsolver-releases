@@ -1,4 +1,4 @@
-wartsolver 0.1.277 - Windows x64
+wartsolver 0.1.278 - Windows x64
 ================================
 
 Unzip and run. There is no installer and nothing is written outside your user

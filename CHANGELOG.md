@@ -3,6 +3,19 @@
 Notable changes to the public **wartsolver** release bundles, newest first.
 Each version's downloads are on the [Releases](../../releases) page.
 
+## 0.1.278 — 2026-09-11 · Windows x64
+
+Maintenance release. No changes to mining behavior, flags, or performance.
+
+### Changed
+- Internal reliability fixes in the background hashrate-board reporter — no
+  effect on mining, and nothing sent that was not sent before.
+
+### Notes
+- Same GPU backends, overclock controls, and flags as 0.1.277.
+- Smart App Control / SmartScreen may still block the unsigned Windows exe; see
+  the bundled `README.txt`. Code-signing is planned.
+
 ## 0.1.277 — 2026-09-11 · Windows x64
 
 ### Fixed
