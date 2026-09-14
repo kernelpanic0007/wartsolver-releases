@@ -3,6 +3,25 @@
 Notable changes to the public **wartsolver** release bundles, newest first.
 Each version's downloads are on the [Releases](../../releases) page.
 
+## 0.1.284 — 2026-09-13 · Linux x64
+
+Linux-only release; the Windows bundle stays at 0.1.278 for now.
+
+### Fixed
+- **HiveOS: accepted/rejected share counters no longer sit at zero.** The
+  bundled `h-config.sh` now passes the event-log flag the stats wrapper reads,
+  so the dashboard's `ar` counts track the miner instead of staying frozen.
+- **Verus throughput protected against a code-layout regression.** Code added
+  since 0.1.278 had shifted every hot verus function off its cache-line phase —
+  a hazard that has cost 3–6% verus on this codebase before. The alignment pad
+  was re-tuned per toolchain and the layout gate passes again. No algorithm or
+  protocol change; the rest of the mining code is unchanged from 0.1.278.
+
+### Added
+- Pool rejections print the pool's own reason inline on the `REJECTED` line.
+- New janus ideal/effective gap metric in the TUI and the `--status-api` JSON,
+  showing what the delivery pipeline achieves against its own ceiling.
+
 ## 0.1.278 — 2026-09-11 · Windows x64 + Linux x64
 
 Maintenance release. No changes to mining behavior, flags, or performance.
