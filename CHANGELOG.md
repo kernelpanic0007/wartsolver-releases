@@ -23,6 +23,8 @@ algorithm or protocol change.
 - Windows: same GPU backends, overclock controls, and flags as 0.1.289.
   Single-file miner — NVIDIA (CUDA, sm_75 -> sm_120) and AMD (HIP) built into
   `wartsolver.exe`; no separate DLL.
+- The Windows zip now ships a `.sha256` alongside it too, matching the Linux
+  and HiveOS assets.
 - Smart App Control / SmartScreen may still block the unsigned Windows exe; see
   the bundled `README.txt`. Code-signing is planned.
 
