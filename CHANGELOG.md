@@ -3,28 +3,17 @@
 Notable changes to the public **wartsolver** release bundles, newest first.
 Each version's downloads are on the [Releases](../../releases) page.
 
-## 0.1.290 — 2026-09-14 · Windows x64
+## 0.1.289 — 2026-09-14 · Windows x64 + Linux x64
 
-Windows catches up to the shared-source changes since 0.1.278; no GPU,
-algorithm or protocol change.
+Windows catches up to Linux after sitting at 0.1.278; both platforms ship the
+same build from here. No GPU, algorithm or protocol change.
 
-### Added
+### Added (both platforms; first appeared in 0.1.284 on Linux)
 - Pool rejections print the pool's own reason inline on the `REJECTED` line.
 - New janus ideal/effective gap metric in the TUI and the `--status-api` JSON,
   showing what the delivery pipeline achieves against its own ceiling.
 
-### Notes
-- Same GPU backends, overclock controls, and flags as 0.1.278.
-- Single-file Windows miner: NVIDIA (CUDA, sm_75 -> sm_120) and AMD (HIP)
-  built into `wartsolver.exe`; no separate DLL.
-- Smart App Control / SmartScreen may still block the unsigned exe; see the
-  bundled `README.txt`. Code-signing is planned.
-
-## 0.1.289 — 2026-09-14 · Linux x64
-
-Linux-only release; the Windows bundle stays at 0.1.278.
-
-### Changed
+### Changed (Linux only)
 - **Verus is faster on every AMD CPU.** The build now tunes for Zen rather than a
   generic x86 target. Generic tuning suppressed a BMI1 bit-extract instruction that
   every Zen part has had since 2017 (it is slow on some Intel chips); with it
@@ -35,6 +24,13 @@ Linux-only release; the Windows bundle stays at 0.1.278.
   protocol change.
 - The public binary is now built with the same toolchain and configuration as the
   author's own fleet binary; the licence check is the only difference between them.
+
+### Notes
+- Windows: same GPU backends, overclock controls, and flags as 0.1.278.
+  Single-file miner — NVIDIA (CUDA, sm_75 -> sm_120) and AMD (HIP) built into
+  `wartsolver.exe`; no separate DLL.
+- Smart App Control / SmartScreen may still block the unsigned Windows exe; see
+  the bundled `README.txt`. Code-signing is planned.
 
 ## 0.1.284 — 2026-09-13 · Linux x64
 
