@@ -3,17 +3,28 @@
 Notable changes to the public **wartsolver** release bundles, newest first.
 Each version's downloads are on the [Releases](../../releases) page.
 
-## 0.1.293 — 2026-09-14 · Linux x64
+## 0.1.293 — 2026-09-14 · Windows x64 + Linux x64
 
-Linux-only release; the Windows bundle stays at 0.1.278.
+Windows catches up to Linux again; both platforms ship the same build. No GPU,
+algorithm or protocol change.
 
 ### Fixed
 - **The miner now reports its real version to the pool.** `mining.subscribe` sent a
   hardcoded `wartsolver/0.1` regardless of the build, so pool-side statistics showed
   every version as 0.1. It now sends the same string `--version` prints.
+- Internal reliability fix in the background hashrate-board reporter — no effect
+  on mining, and nothing sent that was not sent before.
 
 ### Changed
-- Carries the Zen tuning from 0.1.289 (see below); no further performance change.
+- Linux: carries the Zen tuning from 0.1.289 (see below); no further performance
+  change.
+
+### Notes
+- Windows: same GPU backends, overclock controls, and flags as 0.1.289.
+  Single-file miner — NVIDIA (CUDA, sm_75 -> sm_120) and AMD (HIP) built into
+  `wartsolver.exe`; no separate DLL.
+- Smart App Control / SmartScreen may still block the unsigned Windows exe; see
+  the bundled `README.txt`. Code-signing is planned.
 
 ## 0.1.289 — 2026-09-14 · Windows x64 + Linux x64
 

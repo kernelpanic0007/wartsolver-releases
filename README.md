@@ -37,7 +37,7 @@ Grab the latest bundle from the [**Releases**](../../releases) page, unpack, and
 | `wart_sensors.exe` (+ `.config`) | **optional** CPU temp/power reader — separate on purpose (loads a kernel driver Defender may flag; the miner itself does not) |
 | `README.txt` | full user guide |
 
-**Version:** 0.1.289 · **Requires:** Windows 10/11 x64, a GPU driver (NVIDIA any recent / AMD Adrenalin), and the Microsoft Visual C++ 2015–2022 Redistributable (x64).
+**Version:** 0.1.293 · **Requires:** Windows 10/11 x64, a GPU driver (NVIDIA any recent / AMD Adrenalin), and the Microsoft Visual C++ 2015–2022 Redistributable (x64).
 
 Quick start:
 ```
