@@ -3,6 +3,22 @@
 Notable changes to the public **wartsolver** release bundles, newest first.
 Each version's downloads are on the [Releases](../../releases) page.
 
+## 0.1.289 — 2026-09-14 · Linux x64
+
+Linux-only release; the Windows bundle stays at 0.1.278.
+
+### Changed
+- **Verus is faster on every AMD CPU.** The build now tunes for Zen rather than a
+  generic x86 target. Generic tuning suppressed a BMI1 bit-extract instruction that
+  every Zen part has had since 2017 (it is slow on some Intel chips); with it
+  enabled, roughly 270 shift-and-mask pairs in the hot verus loop collapse to single
+  instructions. Measured +1.6% to +5.2% total hashrate across nine rigs.
+- The CPU instruction-set floor is unchanged — AVX2/BMI2/FMA plus AES-NI and PCLMUL —
+  so this binary runs anywhere 0.1.284 ran (Haswell+, Zen+). No GPU, algorithm or
+  protocol change.
+- The public binary is now built with the same toolchain and configuration as the
+  author's own fleet binary; the licence check is the only difference between them.
+
 ## 0.1.284 — 2026-09-13 · Linux x64
 
 Linux-only release; the Windows bundle stays at 0.1.278 for now.
