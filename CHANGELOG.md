@@ -3,6 +3,32 @@
 Notable changes to the public **wartsolver** release bundles, newest first.
 Each version's downloads are on the [Releases](../../releases) page.
 
+## 0.1.297 — 2026-11-10 · Windows x64 + Linux x64
+
+Both platforms ship the same build. No GPU, algorithm or protocol change.
+
+### Fixed
+- **CPU no longer double-counted on single-socket multi-GPU rigs.** `/status` listed
+  the one CPU package once per GPU pool, so a 2-GPU single-socket rig showed its CPU
+  twice, each at roughly half the real Verus hashrate and half the package power.
+  Single-socket rigs now report one CPU entry (summed Verus, whole-package power);
+  multi-socket rigs still get one entry per socket.
+- The background hashrate-board reporter took the *last* CPU entry's power instead
+  of summing, under-reporting CPU watts by half on the same rigs. No effect on
+  mining, and nothing sent that was not sent before.
+- The miner's stratum identity is now one token, `wartsolver-<ver>`, instead of
+  `wartsolver/<ver>`.
+
+### Notes
+- Linux: a cache-line alignment pad in the Verus hasher was re-tuned for this
+  build's code size; no functional or performance effect.
+- Windows: same GPU backends, overclock controls, and flags as 0.1.293.
+  Single-file miner — NVIDIA (CUDA, sm_75 -> sm_120) and AMD (HIP) built into
+  `wartsolver.exe`; no separate DLL. Benchmarked against 0.1.293 on the same rig:
+  no regression.
+- Smart App Control / SmartScreen may still block the unsigned Windows exe; see
+  the bundled `README.txt`. Code-signing is planned.
+
 ## 0.1.293 — 2026-09-14 · Windows x64 + Linux x64
 
 Windows catches up to Linux again; both platforms ship the same build. No GPU,
